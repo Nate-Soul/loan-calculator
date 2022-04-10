@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Loan Calculator </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+    crossorigin="anonymous">
+</head>
+<body>
+    <section class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mx-md-auto">
+                    <div class="card card-body text-center text-dark">
+                        <h2 class="card-title h4 heading-1">Loan Calculator</h2>
+                        <form id="loanForm">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">&#8358;</span>
+                                <input type="number" class="form-control" id="loanAmt" placeholder="Loan Amount">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">%</span>
+                                <input type="number" class="form-control" id="interest" placeholder="interest">
+                            </div>
+                            <div class="mb-3">
+                                <input type="number" class="form-control" id="repaYrs" placeholder="Years to Repay">
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-dark w-100">Calculate</button>
+                            </div>
+                        </form>
+                        <!-- LOADER HERE -->
+                        <figure id="loading" class="d-none">
+                            <img src="assets/images/ajax-loader-sm.gif" alt="">
+                        </figure>
+                        <!-- DISPLAY RESULTS-->
+                        <div id="results" class="pt-4 d-none">
+                            <h5 class="h5 text-left">Results</h5>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Monthly Payment (&#8358;)</span>
+                                <input type="number" class="form-control" id="monthlyPayment" disabled>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Total Payment (&#8358;)</span>
+                                <input type="number" class="form-control" id="totalPayment" disabled>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Total Interest (&#8358;)</span>
+                                <input type="number" class="form-control" id="totalInterest" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+    crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
